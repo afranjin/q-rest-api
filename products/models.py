@@ -1,5 +1,9 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.validators import (
+    MaxValueValidator,
+    MinValueValidator
+)
+from django.contrib.auth.models import User
 
 
 class Product(models.Model):
@@ -7,3 +11,12 @@ class Product(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=20, help_text='Product price.')
     rating = models.FloatField(default=0, validators=[MinValueValidator(0.0), MaxValueValidator(5.0)])
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class ProductRating(models.Model):
+    class Meta:
+        unique_together = ('product', 'user')
+
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    product_rating = models.FloatField(default=0, validators=[MinValueValidator(0.0), MaxValueValidator(5.0)])
