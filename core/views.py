@@ -7,7 +7,11 @@ from .contrib.unique_none import get_unique_or_none
 from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework.exceptions import AuthenticationFailed
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import (
+    authenticate,
+    login,
+    logout
+)
 from rest_framework import status
 
 
