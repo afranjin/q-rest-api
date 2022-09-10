@@ -80,13 +80,12 @@ class ProductsViewSet(viewsets.ModelViewSet):
         return qs.order_by(Lower(order_by))
 
     def list(self, request):
-        """Return list of all products as paginatied response or normal one"""
+        """Return list of all products as paginatied response"""
         try:
             queryset = self.get_ordered_queryset(
                 self.filter_queryset(self.get_queryset()),
                 'name'
             )
-
             page = self.paginate_queryset(queryset)
             if page is not None and request.query_params.get('page', None):
                 serializer = self.get_serializer(page, many=True)
