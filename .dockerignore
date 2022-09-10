@@ -1,0 +1,4 @@
+.editorconfig
+.git/
+Dockerfile*
+docker-compose*
