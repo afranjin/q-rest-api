@@ -7,14 +7,15 @@ from rest_framework.response import Response
 from rest_framework.permissions import (
     IsAuthenticated
 )
-from django.db.models.query import QuerySet
 from core.contrib.unique_none import get_unique_or_none
 from .models import (
     Product,
+    ProductRating
 )
 from django.db.models.functions import Lower
 from .serializers import (
     ProductSerializer,
+    ProductRatingSerializer
 )
 from .product_pagination import ProductPagination
 
@@ -63,7 +64,7 @@ class ProductsViewSet(viewsets.ModelViewSet):
             qs: qs of Product instance
             initial_order: initial ordering if query_params not provided 
         Returns:
-            QuerySet: sorted QuerySet
+            qs: sorted queryset
         """
         order_by = self.request.query_params.get('ordering')
 
@@ -98,3 +99,12 @@ class ProductsViewSet(viewsets.ModelViewSet):
                 {'error': e},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+
+class ProductRatingViewSet(viewsets.ModelViewSet):
+    """
+    Viewing, creating, editing and delete ProductRating instances
+    """
+    queryset = ProductRating.objects.all()
+    serializer_class = ProductRatingSerializer
+    permission_classes = [IsAuthenticated, ]
