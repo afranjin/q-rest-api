@@ -56,3 +56,16 @@ class LoginView(APIView):
                 data={'message': str(e)},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+class LogoutView(APIView):
+    permission_classes = (AllowAny, )
+    renderer_classes = (JSONRenderer, )
+
+    def post(self, request):
+        """Logout the user.
+        """
+        try:
+            logout(request)
+            return Response(data={'message': 'Logged out.'})
+        except Exception:
+            return Response(data={'message': 'Logout failed.'})
