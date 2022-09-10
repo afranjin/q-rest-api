@@ -51,7 +51,7 @@ auth_urls = [
 
 api_urls = [
     path('', include(auth_urls)),
-    path('', include(products_urls)),
+    path('', include(products_urls))
 ]
 
 urlpatterns = [

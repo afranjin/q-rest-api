@@ -6,7 +6,7 @@ from django.core.validators import (
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
-from .contrib.calculate_rating import calculate_product_rating
+
 
 
 class Product(models.Model):
@@ -23,6 +23,17 @@ class ProductRating(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     product_rating = models.FloatField(default=0, validators=[MinValueValidator(0.0), MaxValueValidator(5.0)])
+
+
+def calculate_product_rating(product: Product):
+    """Calculate product rating and save it's instance.
+    """
+    _rating = ProductRating.objects.filter(product=product).aggregate(Avg('product_rating'))
+    if _rating['product_rating__avg']:
+        product.rating = _rating['product_rating__avg']
+    else:
+        product.rating = 0
+    product.save()
 
 
 @receiver(post_save, sender=ProductRating)
