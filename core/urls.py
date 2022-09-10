@@ -7,6 +7,7 @@ from .views import (
     LoginView,
     LogoutView
 )
+from products.urls import products_urls
 
 
 auth_urls = [
@@ -16,6 +17,7 @@ auth_urls = [
 
 api_urls = [
     path('', include(auth_urls)),
+    path('', include(products_urls)),
 ]
 
 urlpatterns = [
