@@ -9,7 +9,6 @@ from django.dispatch import receiver
 from .contrib.calculate_rating import calculate_product_rating
 
 
-
 class Product(models.Model):
     name = models.CharField(max_length=150, help_text='Name of the product', unique=True)
     price = models.DecimalField(decimal_places=2, max_digits=20, help_text='Product price.')
