@@ -55,6 +55,7 @@ api_urls = [
 ]
 
 urlpatterns = [
+    path('', include(swagger_api)),
     path('admin/', admin.site.urls),
     path('api/', include(api_urls))
 ]
