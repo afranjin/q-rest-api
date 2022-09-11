@@ -1,0 +1,46 @@
+[{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Batmen Figure",
+      "price": "100.00",
+      "rating": 0.0,
+      "updated_at": "2022-09-11T23:45:00Z"
+    }
+  }, {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Spidarman Figure",
+      "price": "90.00",
+      "rating": 0.0,
+      "updated_at": "2022-09-11T23:46:00Z"
+    }
+  }, {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Deamon-hunter Figure",
+      "price": "200.00",
+      "rating": 0.0,
+      "updated_at": "2022-09-11T23:47:00Z"
+    }
+  }, {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Lego City",
+      "price": "260.00",
+      "rating": 0.0,
+      "updated_at": "2022-09-11T23:48:00Z"
+    }
+  }, {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Monster Truck",
+      "price": "120.00",
+      "rating": 0.0,
+      "updated_at": "2022-09-11T23:49:00Z"
+    }
+  }]
