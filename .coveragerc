@@ -1,0 +1,7 @@
+[run]
+omit =
+  manage.py
+  products/urls.py
+  core/asgi.py
+  core/urls.py
+  core/wsgi.py
