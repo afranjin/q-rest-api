@@ -2,7 +2,7 @@
     "model": "auth.user",
     "pk": 2,
     "fields": {
-      "password": "8754c32c64b0f524fc50c00f788135de",
+      "password": "pbkdf2_sha256$320000$UcFYhYzHnBfA5Qn3oOyTN1$sC3SkI0rJl54xjvtuHjxDNtn3R1i/QwkfExq1zrvyng=",
       "last_login": null,
       "is_superuser": false,
       "username": "user_one",
@@ -19,7 +19,7 @@
     "model": "auth.user",
     "pk": 3,
     "fields": {
-      "password": "8754c32c64b0f524fc50c00f788135de",
+      "password": "pbkdf2_sha256$320000$UcFYhYzHnBfA5Qn3oOyTN1$sC3SkI0rJl54xjvtuHjxDNtn3R1i/QwkfExq1zrvyng=",
       "last_login": null,
       "is_superuser": false,
       "username": "user_two",
@@ -36,7 +36,7 @@
     "model": "auth.user",
     "pk": 4,
     "fields": {
-      "password": "8754c32c64b0f524fc50c00f788135de",
+      "password": "pbkdf2_sha256$320000$UcFYhYzHnBfA5Qn3oOyTN1$sC3SkI0rJl54xjvtuHjxDNtn3R1i/QwkfExq1zrvyng=",
       "last_login": null,
       "is_superuser": false,
       "username": "user_there",
@@ -53,7 +53,7 @@
     "model": "auth.user",
     "pk": 5,
     "fields": {
-      "password": "8754c32c64b0f524fc50c00f788135de",
+      "password": "pbkdf2_sha256$320000$UcFYhYzHnBfA5Qn3oOyTN1$sC3SkI0rJl54xjvtuHjxDNtn3R1i/QwkfExq1zrvyng=",
       "last_login": null,
       "is_superuser": false,
       "username": "user_four",
@@ -70,7 +70,7 @@
     "model": "auth.user",
     "pk": 6,
     "fields": {
-      "password": "8754c32c64b0f524fc50c00f788135de",
+      "password": "pbkdf2_sha256$320000$UcFYhYzHnBfA5Qn3oOyTN1$sC3SkI0rJl54xjvtuHjxDNtn3R1i/QwkfExq1zrvyng=",
       "last_login": null,
       "is_superuser": false,
       "username": "user_five",
