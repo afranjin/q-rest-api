@@ -29,5 +29,5 @@ def sample_q_product_rating(db, sample_q_user, sample_q_product):
     return ProductRating.objects.create(
         product=sample_q_product,
         user=sample_q_user,
-        rating=3.0
+        product_rating=3.0
     )
