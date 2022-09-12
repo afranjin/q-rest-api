@@ -2,6 +2,7 @@ version: '3.5'
 services:
   q_postgres:
     image: postgres:12.0-alpine
+    container_name: q_db
     environment:
       - POSTGRES_DB=q_rest
       - POSTGRES_USER=q_rest
