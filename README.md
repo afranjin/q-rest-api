@@ -18,3 +18,4 @@ Docker setup:
 - Q - superuser:
     - user: `q-admin`
     - password: `password`
+- Tests: `make backend-tests`
