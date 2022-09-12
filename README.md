@@ -13,8 +13,9 @@ Docker setup:
     - Add q admin `make add-q-admin`
     - Load initial users / products `make load-data`
 - Users: `user_one`, `user_two`, `user_three`, `user_four`, `user_five` -> password: `password`
+- ReDoc documentatiton -> http://localhost:8000/redoc/
 - Api documentatiton with swager -> http://localhost:8000/swagger/
-- Django-admin http://localhost:8000/admin/
+- Django-admin -> http://localhost:8000/admin/
 - Q - superuser:
     - user: `q-admin`
     - password: `password`
